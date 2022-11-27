@@ -1,0 +1,136 @@
+/* =Thickbox Styling
+-------------------------------------------------------------- */
+
+#TB_window{
+  background-color: #f5f5f5;
+  padding: 0 !important;
+  width: 600px !important;
+  min-height: 500px;
+  left: 50% !important;
+  margin-left: -300px !important;  
+}
+
+#TB_ajaxContent{
+  padding: 0;
+}
+
+/* =Shortcode Box
+-------------------------------------------------------------- */
+
+#cp_shortcode_box{
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.cp_shortcode_field{
+  padding: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.cp_shortcode_field:before, .cp_shortcode_field:after{
+  content: " ";
+  display: table;
+}
+
+.cp_shortcode_field:after{
+  clear: both;
+}
+
+.cp_shortcode_field>label{
+  width: 25%;
+  float: left;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.cp_shortcode_field>.field{
+  width: 70%;
+  float: left;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+
+.cp_shortcode_field>.field>.form-control{
+  width: 95%;
+}
+
+.cp_shortcode_field>.field>textarea.form-control{
+  max-width: 95%;
+  resize: none;
+  min-height: 90px;
+}
+
+.cp_shortcode_button{
+  padding: 15px;
+  text-align: right;
+}
+
+#icon-list{
+  max-height: 160px;
+  overflow-y: scroll;
+}
+
+#icon-list>i{
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#icon-list>i.selected{
+  background-color: #3686be;
+  color: #fff;
+}
+
+.cp_preview {
+  width: 150px;
+  clear: both;
+  display: block;  
+}
+
+.cp_preview.active{
+  margin-bottom: 15px;
+}
+
+.feature-control{
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.feature-control.empty-row.screen-reader-text{
+  position: absolute;
+  margin: 0;
+}
+
+.feature-control>.form-control{
+  width: 85%;
+}
+
+#cp_shortcode_box ::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+#cp_shortcode_box ::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: #e6e6e6;
+}
+ 
+#cp_shortcode_box ::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #aaa;
+}
+
+#cp_shortcode_box ::-webkit-scrollbar-thumb:hover{
+  background-color: #888;
+}
+
+#cp_shortcode_box ::-webkit-scrollbar-thumb:active{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}

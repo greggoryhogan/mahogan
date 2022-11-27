@@ -1,0 +1,136 @@
+.cp_metabox {
+  padding: 10px 10px 0 10px;
+}
+
+.cp_metabox:before, .cp_metabox:after, .cp_slide_box:before, .cp_slide_box:after{
+  content: " ";
+  display: table;
+}
+
+.cp_metabox:after, .cp_slide_box:after{
+  clear: both;
+}
+
+.cp_field {
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cp_field>label {
+  width: 20%;
+  float: left;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.cp_field>.field {
+  width: 70%;
+  float: left;
+}
+
+.cp_field>.field>input[type=text], .cp_field>.field>textarea {
+  width: 100%;
+}
+
+.cp_field>.field>textarea{
+  min-height: 110px;
+}
+
+.cp_field>.field.upload_field>input[type=text] {
+  width: 80%;
+}
+
+.cp_field>.field>label{
+  padding-right: 10px;
+}
+
+.cp_slide_box{
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.cp_slide_screenshot {
+  width: 100px;
+  height: 100px;
+  float: right;
+  margin-right: 15px;
+}
+
+.cp_slide_screenshot img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.cp_slider_field {
+  width: 560px;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.cp_slider_field>label{
+  width: 160px;
+  float: left;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.cp_slider_field>input{
+  width: 400px;
+}
+
+.cp_slider_field.upload_field>input{
+  width: 300px;
+}
+
+.cp_slider_field.upload_field>.upload_button{
+  width: 95px;
+}
+
+.remove_button{
+  float: right;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.icon-list{
+  max-height: 160px;
+  overflow-y: scroll;
+}
+
+.icon-list>i{
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.icon-list>i.selected{
+  background-color: #3686be;
+  border-color: #3686be;
+  color: #fff;
+}
+
+#selected_icon{
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 48px;
+  color: #fff;
+  border: 1px solid #3686be;
+  background-color: #3686be;
+}
+
+.not-visible{
+  display: none !important;
+}

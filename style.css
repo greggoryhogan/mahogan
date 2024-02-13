@@ -1,7 +1,7 @@
 /*
 Theme Name: Race
 Description: Creative One Page WordPress Theme
-Version: 1.0
+Version: 1.1
 Author: Codepark
 Author URI: http://codepark.co/
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -599,10 +599,41 @@ select {
   z-index: -1;
   overflow: hidden;
 }
-#backgrounds .slides {
+#about-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+#about-slider .flex-viewport {
   height: 100%;
 }
-#backgrounds .slides li {
+#about .flex-direction-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  height: 50px;
+  width: 90px;
+  background: rgba(0,0,0,.5);
+}
+#about .flex-direction-nav a {
+  opacity: 1;
+  background: transparent;
+  text-shadow: none;
+}
+#about .flex-direction-nav a:before {
+  color: #fff;
+}
+#backgrounds .slides,
+#about-slider .slides {
+  height: 100%;
+}
+#backgrounds .slides li,
+#about-slider .slides li {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -610,7 +641,12 @@ select {
   transition: transform 6s ease 0s;
   -webkit-transition: -webkit-transform 6s ease 0s;
   -moz-transition: -moz-transform 6s ease 0s;
-  -moz-transform-origin: 0 0;
+  -moz-transform-origin: left;
+}
+#about-slider .slides li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #video-wrapper {
   position: fixed;
@@ -1992,6 +2028,20 @@ padding-bottom: 45px;
     padding-left: 10px;
     padding-right: 10px;
   }
+  #about {
+    display: flex; flex-direction: column;
+    padding-bottom: 0px;
+  }
+  #about .col-sm-8 {
+    margin-left: 0px!important;
+    width: 100%!important;
+  }
+  #about .img-side {
+    position: relative;
+    height: 400px;
+    margin-top: 45px;
+    width: 100%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   .post-preview {
@@ -2105,6 +2155,7 @@ padding-bottom: 45px;
     width: 100%;
   }
 }
+
 @media (max-width: 640px) {
   .project {
     width: 100%;
@@ -2114,17 +2165,15 @@ padding-bottom: 45px;
   }
   .homeslideimg {width: 13%; }
   #backgrounds .slides li {
-transform: scale(1.2)!important;
-}
+    transform: scale(1.2)!important;
+    }
+  
+
 }
 @media (max-width: 480px) {
   .homeslideimg {width: 40%; }
   .home-content h1 {
-font-size: 16px;
+    font-size: 16px;
 }
-mahoganandson.com/media="all"
-
 }
-
-
 

@@ -14,7 +14,10 @@ if ($animation == 'yes') {
   $container_class = 'class="container animated" data-animation="fadeIn'.ucfirst($image_position).'"';
 }
 
-?>
+
+$home_slider = get_post_meta($post->ID, 'cp_home_slider', true);
+$slider_animated = get_post_meta($post->ID, 'cp_slider_animated', true);
+$slider_class = ($slider_animated == 'yes') ? 'animated' : 'not-animated'; ?>
 
 <section id="<?php echo $post->post_name; ?>" <?php echo $section_class ?>>
   <div <?php echo $container_class; ?>>
@@ -33,8 +36,21 @@ if ($animation == 'yes') {
     </div>
   </div>
   <div class="img-side img-<?php echo $image_position; ?> col-md-6 col-sm-4">
-    <div class="img-holder">
-      <img class="bg-img" src="<?php echo esc_attr($background_image); ?>" alt="">
-    </div>
+      <?php if(!empty($home_slider)) { ?>
+        <div id="about-slider" class="<?php echo $slider_class; ?>">
+          <ul class="slides">
+          <?php foreach ($home_slider as $slider) { ?>
+            <?php if(isset($slider['image'])){ ?>
+            <li><img src="<?php echo esc_attr($slider['image']); ?>" loading="lazy" alt=""></li>
+            <?php } ?>
+          <?php } ?>
+          </ul>
+        </div>
+
+      <?php } else { ?>
+        <div class="img-holder">
+          <img class="bg-img" src="<?php echo esc_attr($background_image); ?>" alt="">
+        </div>
+      <?php } ?>
   </div>
 </section>

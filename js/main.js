@@ -63,6 +63,45 @@
       },
     });
 
+    //Animated Background Slider
+    $('#about-slider.animated').flexslider({
+      animation: "slide",
+      directionNav: true,
+      controlNav: false,
+      keyboard: false,
+      slideshowSpeed: 6000,
+      /*start: function () {
+        $('#about-slider').find(".slides > li.flex-active-slide").each(function () {
+          var $content = $(this);
+          $content.css({
+            '-webkit-transform': 'scale(1.2)',
+            '-moz-transform': 'scale(1.2)',
+            'transform': 'scale(1.2)',
+          });
+        })
+      },
+      before: function () {
+        $('#about-slider').find(".slides > li").each(function () {
+          var $content = $(this);
+          $content.css({
+            '-webkit-transform': 'scale(1)',
+            '-moz-transform': 'scale(1)',
+            'transform': 'scale(1)',
+          });
+        })
+      },
+      after: function () {
+        $('#about-slider').find(".slides > li.flex-active-slide").each(function () {
+          var $content = $(this);
+          $content.css({
+            '-webkit-transform': 'scale(1.2)',
+            '-moz-transform': 'scale(1.2)',
+            'transform': 'scale(1.2)',
+          });
+        })
+      },*/
+    });
+
     //Not Animated Background Slider
     $('#backgrounds.not-animated').flexslider({
       animation: "fade",

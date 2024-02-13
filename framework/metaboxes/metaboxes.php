@@ -33,6 +33,7 @@ class CPMetaboxes{
     $this->cp_race_add_meta_box('cp_race_page_options', 'Page Options', 'page');    
     $this->cp_race_add_meta_box('cp_race_page_options_home', 'Home Section Options', 'page');
     $this->cp_race_add_meta_box('cp_race_home_slider', 'Home Slider', 'page');
+    $this->cp_race_add_meta_box('cp_race_about_slider', 'About Slider', 'page');
     $this->cp_race_add_meta_box('cp_race_page_options_default', 'Default Section Options', 'page');
     $this->cp_race_add_meta_box('cp_race_page_options_split', 'Split Section Options', 'page');
     $this->cp_race_add_meta_box('cp_race_page_options_blog', 'Blog Section Options', 'page');

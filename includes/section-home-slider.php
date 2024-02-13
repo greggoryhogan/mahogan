@@ -7,10 +7,12 @@ $slider_class = ($slider_animated == 'yes') ? 'animated' : 'not-animated';
 ?>
 <div id="backgrounds" class="<?php echo $slider_class; ?>">
   <ul class="slides">
-  <?php foreach ($home_slider as $slider) { ?>
+  <?php $slidect = 0; 
+  foreach ($home_slider as $slider) { ?>
     <?php if(isset($slider['image'])){ ?>
-    <li><img src="<?php echo esc_attr($slider['image']); ?>" alt=""></li>
-    <?php } ?>
+    <li><img src="<?php echo esc_attr($slider['image']); ?>" <?php if($slidect > 0) { echo 'loading="lazy"'; } ?> alt=""></li>
+    <?php $slidect++;
+  } ?>
   <?php } ?>
   </ul>
 </div>
